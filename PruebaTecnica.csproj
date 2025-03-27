@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ClosedXML" Version="0.104.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.14">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="NetTopologySuite" Version="2.6.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.11" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="accoremgd">
+			<HintPath>..\..\..\..\Program Files\Autodesk\AutoCAD 2025\accoremgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Acdbmgd">
+			<HintPath>..\..\..\..\Program Files\Autodesk\AutoCAD 2025\acdbmgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="Acmgd">
+			<HintPath>..\..\..\..\Program Files\Autodesk\AutoCAD 2025\acmgd.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="AcWindows">
+			<HintPath>..\..\..\..\Program Files\Autodesk\AutoCAD 2025\AcWindows.dll</HintPath>
+		</Reference>
+		<Reference Include="Npgsql">
+			<HintPath>..\..\..\..\Program Files\Autodesk\AutoCAD 2025\Npgsql.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
