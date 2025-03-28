@@ -71,9 +71,20 @@ public class ClasificarPolilineas
             tr.Commit();
         }
 
+        // Obtener la ruta del archivo DWG actual
+        string currentDrawingPath = doc.Name;
+        string drawingDirectory = Path.GetDirectoryName(currentDrawingPath);
+
+        // Construir las rutas de los archivos de salida
+        string excelPath = Path.Combine(drawingDirectory, "PolylineReport.xlsx");
+        string txtPath = Path.Combine(drawingDirectory, "PolylineReport.txt");
+
+        // Generar el informe en la misma carpeta del DWG
+        GenerateReport(categoryCounts, excelPath, txtPath);
+
 
         // Generar el informe (Excel y TXT)
-        GenerateReport(categoryCounts, "PolylineReport.xlsx", "PolylineReport.txt");
+        //GenerateReport(categoryCounts, "PolylineReport.xlsx", "PolylineReport.txt");
 
         ed.WriteMessage("\nClasificación de polilíneas completada. Informe generado.");
 
